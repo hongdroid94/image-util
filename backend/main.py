@@ -8,13 +8,12 @@ import time
 
 app = FastAPI(title="Image Util API", version="1.0.0")
 
-# CORS 설정
+# CORS 설정 - Netlify 프론트엔드 허용
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:3000",
         "https://image-util.netlify.app",
-        "https://*.netlify.app",
     ],
     allow_credentials=True,
     allow_methods=["*"],
